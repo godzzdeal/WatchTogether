@@ -166,3 +166,7 @@ app.get('/', function (req, res) {
 app.get('/room', function (req, res) {
   res.sendFile(`${__dirname}/room.html`);
 });
+
+app.get('/signin', function (req, res) {
+  res.sendFile(`${__dirname}/signin.html`);
+});

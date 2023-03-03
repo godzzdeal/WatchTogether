@@ -5,7 +5,8 @@
  
 ## Libraries
   npm install bcryptjs express jsonwebtoken mysql uuid cors
-
+  npm i bootstrap-icons
+  
 ## mysql server Open Server Panel
   Visit https://ospanel.io/
   

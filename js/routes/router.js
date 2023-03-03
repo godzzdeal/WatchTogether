@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const db = require('../lib/db.js');
 const userMiddleware = require('../middleware/users.js');
 
-router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
+router.post('/signup', userMiddleware.validateRegister, (req, res, next) => {
   db.query(
     `SELECT * FROM users WHERE LOWER(login) = LOWER(${db.escape(
       req.body.login
@@ -48,7 +48,7 @@ router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
   );
 });
 
-router.post('/login', (req, res, next) => {
+router.post('/signin', (req, res, next) => {
   db.query(
     `SELECT * FROM users WHERE login = ${db.escape(req.body.login)};`,
     (err, result) => {

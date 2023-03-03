@@ -185,6 +185,10 @@ app.get('/signin', function (req, res) {
   res.sendFile(`${__dirname}/signin.html`);
 });
 
+app.get('/signup', function (req, res) {
+  res.sendFile(`${__dirname}/signup.html`);
+});
+
 app.get("/api/checking", function(req, res) {
   res.json({
     info: "Checking JWT test"

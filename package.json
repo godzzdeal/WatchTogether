@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "server.js"
   },
   "author": "Godzzdeal",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",

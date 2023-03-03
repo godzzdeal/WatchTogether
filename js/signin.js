@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
   const formData = new FormData(form);
   var xhr = new XMLHttpRequest();
   //open the request
-  xhr.open('POST', 'api/login')
+  xhr.open('POST', 'api/signin')
   xhr.setRequestHeader("Content-Type", "application/json");
 
   //send the form data

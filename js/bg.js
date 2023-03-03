@@ -8,7 +8,7 @@ document.body.appendChild(canvas);
 canvas.width = maxx;
 canvas.height = maxy;
 var context = canvas.getContext("2d");
-var dotCount = 400;
+var dotCount = 600;
 var dots = [];
 // create dots
 for (var i = 0; i < dotCount; i++) {

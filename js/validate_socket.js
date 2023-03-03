@@ -19,4 +19,3 @@ socket.on('connect', function () {
     document.getElementsByName('author_footer')[0].innerHTML = data.author;
   });
 });
-

@@ -4,6 +4,12 @@ const { Server } = require("socket.io");
 const User = require('./js/modules/users');
 const app = express();
 const httpServer = createServer(app);
+const bodyParser = require("body-parser");
+const cors = require('cors');
+// add routes
+const router = require('./js/routes/router.js');
+
+
 const io = new Server(httpServer, { /* options */ });
 
 const roomVersion = 'beta_primary_room';
@@ -155,7 +161,15 @@ function returnDataInMap(usersMap) {
   return data;
 };
 
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use('/api', router);
 app.use(express.static(`${__dirname}/`));
+
 httpServer.listen(process.env.PORT || 3000);
 console.log('Server started');
 
@@ -169,4 +183,10 @@ app.get('/room', function (req, res) {
 
 app.get('/signin', function (req, res) {
   res.sendFile(`${__dirname}/signin.html`);
+});
+
+app.get("/api/checking", function(req, res) {
+  res.json({
+    info: "Checking JWT test"
+  });
 });

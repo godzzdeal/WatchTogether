@@ -119,18 +119,61 @@ function disconnectRoom() {
 };
 
 function createElementInListUser(usersMap, primary) {
-  let classC = 'list-group-item bg-dark d-flex justify-content-between align-items-center href-viewer';
+
   for (var index in usersMap) {
     for (var key in usersMap[index]) {
       let el = document.getElementById(`time_${key}`);
       if (el == undefined) {
-        let span_class = index == 0 & primary == userName ? 'badge bg-warning' : 'badge bg-primary';
-        let new_content = `<a href="#" class="${classC}">${key} <span class="${span_class} rounded-pill" id="time_${key}">${usersMap[index][key].time2}</span></a> `;
-        document.getElementsByName('listUsersInRoom')[0].insertAdjacentHTML('afterbegin', new_content);
+        contentUserList(key, usersMap[index][key].time2);
       };
     };
   };
 };
+function contentUserList(key, time) {
+
+  // create a new li element
+  const newLi = document.createElement("li");
+
+  let classesLi = ['list-group-item', 'd-flex', 'justify-content-between', 'align-items-center'];
+  newLi.classList.add(...classesLi);
+
+  let classesDiv1 = ['d-flex', 'align-items-center'];
+  let newDiv1 = document.createElement("div");
+  newDiv1.classList.add(...classesDiv1);
+
+  let classesI = ['bi', 'bi-person-circle', "rounded-circle"];
+  let newI = document.createElement("i");
+  newI.classList.add(...classesI);
+  newI.setAttribute("alt", key);
+  newI.setAttribute("width", "45");
+  newI.setAttribute("height", "45");
+  newDiv1.appendChild(newI);
+
+  let newDiv2 = document.createElement("div");
+  let classesDiv2 = ['ms-3'];
+  newDiv2.classList.add(...classesDiv2);
+
+  let newP1 = document.createElement("p");
+  let classesP1 = ['fw-bold', 'mb-1'];
+  newP1.classList.add(...classesP1);
+  let newContentP1 = document.createTextNode(key);
+  newP1.appendChild(newContentP1);
+  newDiv2.appendChild(newP1);
+
+  let newP2 = document.createElement("p");
+  let classesP2 = ['text-muted', 'mb-0'];
+  newP2.classList.add(...classesP2);
+  newP2.setAttribute("id", `time_${key}`);
+  let newContentP2 = document.createTextNode(time);
+  newP2.appendChild(newContentP2);
+  newDiv2.appendChild(newP2);
+  newDiv1.appendChild(newDiv2);
+
+  newLi.appendChild(newDiv1);
+
+  const currentDiv = document.getElementsByName("listUsersInRoom");
+  currentDiv[0].insertAdjacentElement("beforeend", newLi);
+}
 
 function updateTimeUser(usersMap) {
   for (var index in usersMap) {

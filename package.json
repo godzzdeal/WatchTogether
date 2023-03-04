@@ -1,6 +1,6 @@
 {
-  "name": "test_socket",
-  "version": "1.0.4",
+  "name": "space_watch",
+  "version": "0.2.1b-stable",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

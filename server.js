@@ -185,6 +185,9 @@ app.get('/old_room_in', function (req, res) {
   res.sendFile(`${__dirname}/old_room_in.html`);
 });
 
+app.get('/startwatch', function (req, res) {
+  res.sendFile(`${__dirname}/new_room_in.html`);
+});
 
 app.get('/signin', function (req, res) {
   res.sendFile(`${__dirname}/signin.html`);

@@ -70,6 +70,15 @@
     .card-body {
       border-radius: 2rem;
     }
+
+    .scale {
+      transition: 1s;
+    }
+
+    .scale:hover {
+      transform: scale(1.2);
+      box-shadow: #fff;
+    }
   </style>
   <link href="css/cover.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
@@ -126,30 +135,54 @@
       </div>
     </div>
   </header>
-
   <!-- MAIN SECTION -->
   <section class="">
-    <div class="container-fluid text-white text-center">
-      <div class="row" style="display: inline;">
-
-        <div class="card mb-3" style="max-width: 540px;">
+    <!-- Lead Space Watсh -->
+    <div class="card mb-3 text-white scale" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 justify-content-center align-items-center">
+          <img src="img/content/lead/planet-logo.png" class="img-fluid scale" alt="planet">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Space Watсh</h5>
+            <p class="card-text">Смотрите вместе, даже на расстоянии космоса...</p>
+            <p class="card-text"><small class="text-muted">Сервис для совместного просмотра</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Lead YouTube -->
+    <div class="card mb-3 text-white scale" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 justify-content-center align-items-center">
+          <img src="img/content/lead/youtube-logo.png" class="img-fluid scale" alt="planet">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">YouTube</h5>
+            <p class="card-text">Вы можете загружать ссылки <a href="https://www.youtube.com/"
+                class="link-light text-decoration-none">YouTube</a> для для совместного просмотра</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Lead You Link -->
+        <div class="card mb-3 text-white scale" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4 justify-content-center align-items-center">
-              <img src="img/content/lead/prefab_1.png" class="img-fluid" alt="planet">
+              <img src="img/content/lead/link-logo.png" class="img-fluid scale" alt="planet">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Space Watсh</h5>
-                <p class="card-text">Смотрите вместе, даже на расстоянии космоса...</p>
-                <p class="card-text"><small class="text-muted">Сервис для совместного просмотра</small></p>
+                <h5 class="card-title">Любая ссылка</h5>
+                <p class="card-text">Вы можете загружать любые свои ссылки на видео контент для совместного просмотра</p>
+                <p class="card-text"><small class="text-muted"></small></p>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
-    </div>
-
   </section>
   <!-- FOOTER -->
   <footer>

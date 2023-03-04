@@ -111,13 +111,13 @@
         <div class="col">
           <div class="card ma-2em">
             <div class="card-body ">
+              <div class="alert alert-primary d-flex align-items-center alert-dismissible fade show" role="alert">
+                <ion-icon name="alert-circle" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"> </ion-icon>
+                <div>Введите любой ник и выберете комнату в которой хотите смотерть видео</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+              </div>
               <div class="d-none">
                 <!-- Alert Info -->
-                <div class="alert alert-primary d-flex align-items-center alert-dismissible fade show" role="alert">
-                  <ion-icon name="alert-circle" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"> </ion-icon>
-                  <div>Пример Инфо</div>
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
-                </div>
                 <!-- Alert Error -->
                 <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert">
                   <ion-icon name="warning" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"> </ion-icon>
@@ -141,7 +141,7 @@
                   </div>
                 </div>
                 <div>
-                  <label for="validationCustomUsername" class="form-label">Имя пользователя</label>
+                  <label for="validationCustomUsername" class="form-label">Ник</label>
                   <!-- <div class="input-group"> -->
                   <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
                   <input type="text" class="form-control transparent-input text-white" id="validationCustomUsername"
@@ -172,6 +172,8 @@
       
                 </div>
                 <button class="btn btn-outline-light" type="submit"><i class="bi bi-play"></i> Начать просмотр</button>
+                <a href="/" class="link-light d-flex align-items-center justify-content-center">
+                  <i class="bi bi-link"></i> Главная</a>
               </form>
             </div>
           </div>

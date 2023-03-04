@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="css/bg.css">
   <style>
     /* all test styles */
+    .tx-s{
+      text-shadow: black 0 0 5px;
+    }
     .tp-05 {
       opacity: 0.4;
       transition: opacity 1s;
@@ -38,10 +41,14 @@
       backdrop-filter: blur(3px);
     }
 
+    .ma-2em {
+      margin: 2em auto;
+    }
+
     .card {
       width: 80%;
       max-width: 550px;
-      margin: 2em auto;
+
       padding: 1em;
       box-shadow:
         0 0 0 0 rgba(255, 255, 255, 0.3);
@@ -108,7 +115,7 @@
   <header class="p-3 backgr-blur">
     <div class="row ">
       <div class="col-sm-8">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div class="d-flex flex-wrap justify-content-lg-start">
           <!-- Logo -->
           <div id="included_logo">
           </div>
@@ -129,16 +136,29 @@
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="#">Выход</a></li>
-          </ul> -->
+          </ul>
+        </div> -->
         </div>
       </div>
-    </div>
+
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <div class="col-md-4">
+          <img src="img/content/lead/planet-logo.png" class="img-fluid scale" alt="planet" style="z-index: -1;">
+        </div>
+        <div class="text-white">
+          <h1 class="mb-3">Space Watch</h1>
+          <p class="mb-4 card-text" style="background-color: black; opacity: 0.2;"><h5>Смотрите вместе свободно 👀 даже на расстоянии космоса 🌎🚀🛰</h5></p>
+          <a class="btn btn-outline-light btn-lg m-2" href="old_room_in" role="button" rel="nofollow"
+            target="_blank">Начать</a>
+        </div>
+      </div>
+
   </header>
   <!-- MAIN SECTION -->
   <section class="">
     <!-- Lead Space Watсh -->
-    <div class="card mb-3 text-white scale" style="max-width: 540px;">
-      <div class="row g-0">
+    <!-- <div class="card ma-2em mb-3 text-white scale" style="max-width: 540px;"> -->
+    <!-- <div class="row g-0">
         <div class="col-md-4 justify-content-center align-items-center">
           <img src="img/content/lead/planet-logo.png" class="img-fluid scale" alt="planet">
         </div>
@@ -149,41 +169,54 @@
             <p class="card-text"><small class="text-muted">Сервис для совместного просмотра</small></p>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Lead YouTube -->
-    <div class="card mb-3 text-white scale" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4 justify-content-center align-items-center">
-          <img src="img/content/lead/youtube-logo.png" class="img-fluid scale" alt="planet">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">YouTube</h5>
-            <p class="card-text">Вы можете загружать ссылки <a href="https://www.youtube.com/"
-                class="link-danger">YouTube</a> для для совместного просмотра</p>
-            <p class="card-text"></p>
-          </div>
-        </div>
-        <button class="btn btn-outline-light" type="button" id="start_watch"> Начать</button>
-      </div>
-    </div>
-        <!-- Lead You Link -->
-        <div class="card mb-3 text-white scale" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4 justify-content-center align-items-center">
-              <img src="img/content/lead/link-logo.png" class="img-fluid scale" alt="planet">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Любая ссылка</h5>
-                <p class="card-text">Вы можете загружать любые свои ссылки на видео контент для совместного просмотра</p>
-                <p class="card-text"></p>
+      </div> -->
+    <!-- </div> -->
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col justify-content-center">
+
+          <!-- Lead YouTube -->
+          <div class="card mb-3 text-white scale" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4 justify-content-center align-items-center">
+                <img src="img/content/lead/youtube-logo.png" class="img-fluid scale" alt="planet">
               </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">YouTube</h5>
+                  <p class="card-text">Вы можете загружать ссылки <a href="https://www.youtube.com/"
+                      class="link-danger">YouTube</a> для для совместного просмотра</p>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+              <!-- <button class="btn btn-outline-light" type="button" id="start_watch"> Начать</button> -->
             </div>
-            <button class="btn btn-outline-light" type="button" id="start_watch">Начать</button>
           </div>
         </div>
+        <div class="col justify-content-center">
+          <!-- Lead You Link -->
+          <div class="card mb-3 text-white scale" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4 justify-content-center align-items-center">
+                <img src="img/content/lead/link-logo.png" class="img-fluid scale" alt="planet">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Любая ссылка</h5>
+                  <p class="card-text">Вы можете загружать любые свои ссылки на видео для совместного просмотра
+                  </p>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+              <!-- <button class="btn btn-outline-light" type="button" id="start_watch">Начать</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
   </section>
   <!-- FOOTER -->
   <footer>

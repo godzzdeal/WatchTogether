@@ -10,6 +10,30 @@
   <link rel="stylesheet" href="css/bg.css">
   <style>
     /* all test styles */
+    .transparent-input {
+      background-color: rgba(0, 0, 0, 0) !important;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 500px black;
+
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .row-centered {
+      text-align: center;
+    }
+
     .tx-s {
       text-shadow: black 0 0 5px;
     }
@@ -43,6 +67,14 @@
 
     .ma-2em {
       margin: 2em auto;
+    }
+
+    .ma-2em-all {
+      margin: 2vh 6vh 2vh 6vh;
+    }
+
+    .b-light-rgba02 {
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .card {
@@ -158,40 +190,55 @@
 
   <!-- MAIN SECTION -->
   <section class="" style="margin-top: 10vh;">
-    <div class="row" style="padding-top: 1em;">
-      <div class="input-group mb-3 sm">
-        <input type="text" class="form-control form-control-sm" placeholder="Ссылка на видео"
-          aria-label="Ссылка на видео" aria-describedby="basic-addon2" id="urlVideo">
-        <div class="input-group-append">
-          <button class="btn btn-success btn-sm" type="button" id="addUrlToPlayer">Добавить</button>
+
+    <!-- PlayerJS -->
+    <div class="frame-container">
+      <div id="player" class="ma-2em-all b-light-rgba02 tp-05" style="display: inherit;">
+
+
+      </div>
+      <div class="container">
+        <div class="input-group mb-3">
+          <span class="input-group-text transparent-input text-white" id="addUrlToPlayer"><i class="bi bi-play-btn"></i></span>
+          <input type="text" class="form-control form-control-sm transparent-input text-white"
+            placeholder="Добавить ссылку" aria-label="Recipient's username" aria-describedby="addUrlToPlayer"
+            id="urlVideo" />
+          <button class="btn btn-outline-success btn-sm" type="button" id="addUrlToPlayer" data-mdb-ripple-color="dark">
+            Добавить
+          </button>
         </div>
       </div>
     </div>
-    <div class="frame-container">
-      <div id="player" style="display: inherit;"></div>
+    </div>
     </div>
 
-    <ul class="list-group list-group-horizontal position-relative overflow-auto w-75" name="listUsersInRoom">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-person-circle rounded-circle" alt="user" width="45" height="45"></i>
-          <div class="ms-3">
-            <p class="fw-bold mb-1">User</p>
-            <p class="text-muted mb-0">0:00</p>
+    <div class="container">
+
+      <h6 class="bg-dark p-2 transparent-input rounded text-white">Сейчас смотрят</h6>
+      <ul class="list-group list-group-horizontal position-relative overflow-auto" name="listUsersInRoom"
+        data-mdb-perfect-scrollbar='true'>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-person-circle rounded-circle" alt="user" width="45" height="45"></i>
+            <div class="ms-3">
+              <p class="fw-bold mb-1">User</p>
+              <p class="text-muted mb-0">0:00</p>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div id="included_footer">
+        </li>
+      </ul>
+      <!-- </div> -->
     </div>
-  </footer>
 
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/room.js" type="text/javascript" acync></script>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="included_footer">
+      </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/room.js" type="text/javascript" acync></script>
 
 </body>
 

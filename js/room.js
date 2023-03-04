@@ -134,7 +134,7 @@ function contentUserList(key, time) {
   // create a new li element
   const newLi = document.createElement("li");
 
-  let classesLi = ['list-group-item', 'd-flex', 'justify-content-between', 'align-items-center'];
+  let classesLi = ['list-group-item', 'list-group-item-action', 'px-3', 'd-flex', 'transparent-input', 'justify-content-between', 'align-items-center', 'text-white'];
   newLi.classList.add(...classesLi);
 
   let classesDiv1 = ['d-flex', 'align-items-center'];

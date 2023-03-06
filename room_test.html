@@ -131,6 +131,25 @@
       $("#included_footer").load("footer.html");
       $("#included_logo").load("logo_href.html");
     });
+
+    const ping = async () => {
+      let start = Date.now();
+      try {
+        await fetch("http://141.101.205.175:3000");
+      }
+      catch (err) { }
+
+      return (Date.now() - start);
+    };
+
+    const start = async () => {
+      const result = await ping();
+      document.getElementById("ping").innerText=`Ping: ${result}`;
+      console.log(result);
+    }
+
+   setInterval(start, 1000);
+
   </script>
   <!-- Socket.io -->
   <script src="socket.io/socket.io.js"></script>
@@ -165,6 +184,7 @@
 
       </div>
       <div class="col-sm-4" style="z-index: 9999;">
+        <div class="text-white" id="ping">0</div>
         <!-- User data -->
         <div class="dropdown float-end" style="z-index: 9999;">
           <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1"

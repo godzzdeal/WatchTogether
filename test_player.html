@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+    <!-- PlayerJS -->
+    <script src="js/playerjs.js" type="text/javascript" async> </script>
+    <!-- Socket.io -->
+  <script src="socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="player"></div>
+  <div class="input-group mb-3">
+    <span class="input-group-text transparent-input text-white"><i class="bi bi-play-btn"></i></span>
+    <input type="text" class="form-control form-control-sm transparent-input text-white"
+      placeholder="Добавить ссылку" aria-label="Recipient's username" aria-describedby="addUrlToPlayer"
+      id="urlVideo" />
+    <button class="btn btn-outline-success btn-sm" type="button" id="addUrlToPlayer" data-mdb-ripple-color="dark">
+      Добавить
+    </button>
+  </div>
+  <script src="test_player.js" type="text/javascript" async></script>
+</body>
+</html>

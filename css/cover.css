@@ -63,8 +63,7 @@ select:focus,
  */
 
 .h-100m {
-  /* height: 100vh; */
-  /* overflow: auto; */
+  height: 100vh;
 }
 
 .w-100m {
@@ -72,7 +71,7 @@ select:focus,
 }
 
 .bg-dark-m {
-  /* background-color: rgb(61,60,60); */
+  background-color: rgb(61,60,60);
 }
 
 .op-05 {
@@ -111,7 +110,7 @@ select:focus,
 }
 
 .multiple-filters {
-  /* backdrop-filter: blur(10px) saturate(120%) contrast(50%); */
+  backdrop-filter: blur(10px) saturate(120%) contrast(50%);
 }
 /*
  * Header

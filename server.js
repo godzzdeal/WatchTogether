@@ -1,9 +1,14 @@
 const express = require("express");
 const { createServer, get } = require("http");
+// const { createServer, get } = require("https");
 const { Server } = require("socket.io");
 const User = require('./js/modules/users');
 const app = express();
 const httpServer = createServer(app);
+var fs = require('fs');
+// var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+// var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+// const httpsServer = createServer(app);
 const bodyParser = require("body-parser");
 const cors = require('cors');
 // add routes
@@ -12,8 +17,8 @@ const router = require('./js/routes/router.js');
 
 const io = new Server(httpServer, { /* options */ });
 
-const roomVersion = 'beta_primary_room';
-const root = 'root_primary_room';
+const roomVersion = process.env.ROOM_MAIN;
+const root = process.env.ROOM_ROOT;
 console.log('Wait, server starting...');
 const info = require('./package.json');
 let statusPlayerOnRooms = new Map();
@@ -70,7 +75,7 @@ io.on("connection", (socket) => {
   socket.on('disconnect', function () {
     console.log(`Disconnect socket ${socket.nickname}`);
     initThisRoom(socket.room);
-    if (thisRoom!=undefined) {
+    if (thisRoom != undefined) {
       thisRoom.delete(socket.nickname);
       console.log(thisRoom);
     };
@@ -117,7 +122,7 @@ io.on("connection", (socket) => {
 
   });
 
-  socket.on('sendTimeTwo', function (data) {
+  socket.on('sendTi meTwo', function (data) {
     updateUserList(data, socket);
   });
 });
@@ -131,7 +136,7 @@ function updateUserList(data, client) {
   };
   console.log('[updateUserList]', thisRoom.get(primaryData.pUser));
   // if (data.un == primaryData.pUser) {
-    primaryData.pTime.time2 = data.time;
+  primaryData.pTime.time2 = data.time;
   // };
   thisRoom.set(data.un, primaryData.pTime);
 
@@ -165,7 +170,7 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: true
+  extended: true
 }));
 app.use('/api', router);
 app.use(express.static(`${__dirname}/`));
@@ -173,12 +178,17 @@ app.use(express.static(`${__dirname}/`));
 httpServer.listen(process.env.PORT || 3000);
 console.log('Server started');
 
+
 app.get('/', function (req, res) {
   res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get('/room', function (req, res) {
   res.sendFile(`${__dirname}/room.html`);
+});
+
+app.get('/test', function (req, res) {
+  res.sendFile(`${__dirname}/test_player.html`);
 });
 
 app.get('/room_test', function (req, res) {
@@ -197,8 +207,14 @@ app.get('/signup', function (req, res) {
   res.sendFile(`${__dirname}/signup.html`);
 });
 
-app.get("/api/checking", function(req, res) {
+app.get("/api/checking", function (req, res) {
   res.json({
-    info: "Checking JWT test"
+    info: "API is ready for request"
   });
+});
+
+// 404 Route (ALWAYS Keep this as the last route)
+app.get('*', (req, res) => {
+  // res.status(404).send('<h1>404! Page not found</h1>');
+  res.status(404).sendFile(`${__dirname}/404.html`);
 });

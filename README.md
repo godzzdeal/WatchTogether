@@ -7,6 +7,10 @@
   npm install bcryptjs express jsonwebtoken mysql uuid cors
   <p>
   npm i bootstrap-icons
+  <p>
+  npm i bootstrap
+  <p>
+  npm i dotenv
   
 ## mysql server Open Server Panel
   Visit https://ospanel.io/
@@ -81,7 +85,7 @@ COMMIT;
 
 # API
   
-  > 🛣️ /api/login POST
+  > 🛣️ /api/signin POST
   <details><summary>body</summary>
   <p>
     
@@ -115,7 +119,7 @@ COMMIT;
   </p>
   </details>
   
-   > 🛣️ #/api/sign-up POST
+   > 🛣️ #/api/signup POST
   <details><summary>body</summary>
   <p>
     

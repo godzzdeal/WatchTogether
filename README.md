@@ -12,7 +12,9 @@
   <p>
   npm i dotenv
   <p>
-  npm i now 
+  npm i -g now (Terminal: now) 
+    ![image](https://user-images.githubusercontent.com/75362788/223366761-122fe53e-1084-4d47-8a78-f977df1c998f.png)
+    ![image](https://user-images.githubusercontent.com/75362788/223366979-4e2a1aeb-846a-4cfe-b668-86b42b302dc6.png)
   <p>
   npm i vercel
   

@@ -16,8 +16,10 @@
     ![image](https://user-images.githubusercontent.com/75362788/223366761-122fe53e-1084-4d47-8a78-f977df1c998f.png)
     ![image](https://user-images.githubusercontent.com/75362788/223366979-4e2a1aeb-846a-4cfe-b668-86b42b302dc6.png)
   <p>
-  npm i -g vercel (Terminal: vercel) 
+  npm i -g vercel (Terminal: vercel; vercel --prod) 
   ![image](https://user-images.githubusercontent.com/75362788/223367720-2f7b3d86-bc41-4e3e-98d7-6abf4921ad9c.png)
+  ![image](https://user-images.githubusercontent.com/75362788/223368038-d9747fc5-435d-45dd-a688-3aa5573a0f24.png)
+
 
 ## mysql server Open Server Panel
   Visit https://ospanel.io/

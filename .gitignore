@@ -4,3 +4,4 @@ ui/
 backup/
 .env
 README.md
+.vercel

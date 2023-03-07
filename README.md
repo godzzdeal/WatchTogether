@@ -3,7 +3,7 @@
   Node.js v18.14.0
   Visit https://nodejs.org/ru/download/
  
-## Libraries
+## Libraries Enviroment
   npm install bcryptjs express jsonwebtoken mysql uuid cors
   <p>
   npm i bootstrap-icons
@@ -11,6 +11,10 @@
   npm i bootstrap
   <p>
   npm i dotenv
+  <p>
+  npm i now 
+  <p>
+  npm i vercel
   
 ## mysql server Open Server Panel
   Visit https://ospanel.io/

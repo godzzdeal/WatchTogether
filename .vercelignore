@@ -1,0 +1,7 @@
+!node_modules/
+ui/
+@ui/
+backup/
+!.env
+README.md
+.vercel
